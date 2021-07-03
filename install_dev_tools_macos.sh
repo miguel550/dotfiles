@@ -13,7 +13,7 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-ln -s .tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 echo Installing nvim...
 brew install tree-sitter --HEAD
@@ -25,7 +25,7 @@ if [ $? -ne 0 ]; then
 fi
 
 mkdir -p ~/.config/nvim
-ln -s .nvimrc ~/.config/nvim/init.vim
+ln -s ~/dotfiles/.nvimrc ~/.config/nvim/init.vim
 
 echo "Install vim-plug to install plugings in nvim"
 echo "https://github.com/junegunn/vim-plug#unix-linux"
