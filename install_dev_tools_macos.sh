@@ -24,5 +24,8 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-rm ~/.config/nvim/init.vim
+mkdir -p ~/.config/nvim
 ln -s .nvimrc ~/.config/nvim/init.vim
+
+echo "Install vim-plug to install plugings in nvim"
+echo "https://github.com/junegunn/vim-plug#unix-linux"
