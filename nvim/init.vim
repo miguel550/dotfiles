@@ -58,7 +58,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
   Plug 'nvim-treesitter/completion-treesitter'
-  Plug 'tversteeg/registers.nvim'
   Plug 'p00f/nvim-ts-rainbow'
 call plug#end()
 
@@ -124,6 +123,22 @@ let g:netrw_keepdir = 0
 set rtp+=/usr/local/opt/fzf
 " tsserver sucks, code action sucks
 lua << EOF
+function OrgImports()
+      local wait_ms = 1000
+      local params = vim.lsp.util.make_range_params()
+      params.context = {only = {"source.organizeImports"}}
+      local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, wait_ms)
+      for _, res in pairs(result or {}) do
+        for _, r in pairs(res.result or {}) do
+          if r.edit then
+            vim.lsp.util.apply_workspace_edit(r.edit)
+          else
+            vim.lsp.buf.execute_command(r.command)
+          end
+        end
+      end
+      vim.lsp.buf.formatting()
+    end
 local nvim_lsp = require'lspconfig'
 nvim_lsp.tsserver.setup{on_attach=require'completion'.on_attach}
 nvim_lsp.pyright.setup{on_attach=require'completion'.on_attach}
