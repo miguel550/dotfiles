@@ -1,0 +1,95 @@
+{
+	"name": "Vimium C",
+	"@time": "11/5/2021, 8:26:23 PM",
+	"time": 1636158383589,
+	"environment": {
+		"extension": "1.94.0",
+		"platform": "mac",
+		"chrome": "95"
+	},
+	"exclusionRules": [
+		{
+			"passKeys": "",
+			"pattern": ":https://mail.google.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://www.nitrotype.com/race"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://www.velocidactil.es/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://play.decentraland.org/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":chrome://bookmarks/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://www.typing.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://vimvalley.com/"
+		}
+	],
+	"grabBackFocus": true,
+	"ignoreKeyboardLayout": 2,
+	"keyMappings": [
+		"#!no-check",
+		"map gh LinkHints.activateHover",
+		"map gH LinkHints.unhoverLast",
+		"map ' Marks.activate",
+		"map gl visitPreviousTab",
+		"map cd closeDownloadBar",
+		"map ss captureTab",
+		""
+	],
+	"regexFindMode": true,
+	"searchEngines": [
+		"bi|bing: https://www.bing.com/search?q=%s \\",
+		"  blank=https://www.bing.com/ Bing",
+		"g|go|gg|google|Google: https://www.google.com/search?q=%s \\",
+		"  www.google.com re=/^(?:\\.[a-z]{2,4})?\\/search\\b.*?[#&?]q=([^#&]*)/i\\",
+		"  blank=https://www.google.com/ Google",
+		"br|brave: https://search.brave.com/search?q=%s Brave",
+		"d|dd|ddg|duckduckgo: https://duckduckgo.com/?q=%s DuckDuckGo",
+		"ec|ecosia: https://www.ecosia.org/search?q=%s Ecosia",
+		"qw|qwant: https://www.qwant.com/?q=%s Qwant",
+		"ya|yd|yandex: https://yandex.com/search/?text=%s Yandex",
+		"yh|yahoo: https://search.yahoo.com/search?p=%s Yahoo",
+		"",
+		"g.m|gm|g.map|gmap: https://www.google.com/maps?q=%s \\",
+		"  blank=https://www.google.com/maps Google Maps",
+		"b.m|bm|map|b.map|bmap|百度地图: \\",
+		"  https://api.map.baidu.com/geocoder?output=html&address=%s&src=vimium-c",
+		"y|yt: https://www.youtube.com/results?search_query=%s \\",
+		"  blank=https://www.youtube.com/ YouTube",
+		"w|wiki: https://www.wikipedia.org/w/index.php?search=%s Wikipedia",
+		"g.s|gs|gscholar: https://scholar.google.com/scholar?q=$s \\",
+		"  scholar.google.com re=/^(?:\\.[a-z]{2,4})?\\/scholar\\b.*?[#&?]q=([^#&]*)/i\\",
+		"  blank=https://scholar.google.com/ Google Scholar",
+		"",
+		"a|ae|ali|alie|aliexp: https://www.aliexpress.com/wholesale?SearchText=%s \\",
+		"  blank=https://www.aliexpress.com/ AliExpress",
+		"j|jd|jb|joy|joybuy: https://www.joybuy.com/search?keywords=%s \\",
+		"  blank=https://www.joybuy.com/ Joybuy",
+		"az|amazon: https://www.amazon.com/s/?field-keywords=%s \\",
+		"  blank=https://www.amazon.com/ Amazon",
+		"",
+		"v.m|v\\:math: vimium://math\\ $S re= Calculate",
+		"gh|github: https://github.com/search?q=$s \\",
+		"  blank=https://github.com/ GitHub Repo",
+		"ge|gitee: https://search.gitee.com/?type=repository&q=$s \\",
+		"  blank=https://gitee.com/ Gitee 仓库",
+		"js\\:|Js: javascript:\\ $S; JavaScript",
+		""
+	],
+	"showActionIcon": false,
+	"showAdvancedCommands": false,
+	"vimSync": true
+}
